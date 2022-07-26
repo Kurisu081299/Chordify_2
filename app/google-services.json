@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "487702001900",
+    "firebase_url": "https://chordify-dcf02-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "chordify-dcf02",
+    "storage_bucket": "chordify-dcf02.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:487702001900:android:0bb5ad6d268d48a60e8dc9",
+        "android_client_info": {
+          "package_name": "com.example.chordify"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "487702001900-8lr43ifsciem0b8d5a1pmhopjh25fdvd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgI5FwVMWccO0iEeVQv11i745x31lMc0c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "487702001900-8lr43ifsciem0b8d5a1pmhopjh25fdvd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

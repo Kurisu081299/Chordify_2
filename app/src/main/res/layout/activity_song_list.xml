@@ -39,15 +39,60 @@
         android:padding="4dp"
         android:queryHint="Search Songs" />
 
-    <ListView
-        android:id="@+id/listviewsongs"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
         android:layout_below="@id/searchsongs"
         android:layout_marginStart="13dp"
         android:layout_marginEnd="13dp"
         android:layout_marginBottom="60dp"
-        android:background="@drawable/backbuttonround" />
+        android:background="@drawable/backbuttonround">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Song Title"
+            android:textStyle="bold"
+            android:textSize="23dp"
+            android:textColor="#000000"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="17dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Singer"
+            android:textStyle="bold"
+            android:textSize="23dp"
+            android:textColor="#000000"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="40dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Key"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="23dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="70dp"
+            />
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listviewsongs"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/searchsongs"
+        android:layout_marginTop="45dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="60dp"
+        tools:listitem="@layout/song_item"/>
 
 
     <ImageButton
