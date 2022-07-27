@@ -17,6 +17,7 @@ class SongList : AppCompatActivity() {
     private lateinit var songRecyclerView: RecyclerView
     private lateinit var songArrayList : ArrayList<SongsInfo>
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_song_list)
@@ -51,8 +52,22 @@ class SongList : AppCompatActivity() {
                         val song = songSnapshot.getValue(SongsInfo::class.java)
                         songArrayList.add(song!!)
                     }
+                    var adapter = MyAdapter(songArrayList)
+                    songRecyclerView.adapter = adapter
+                    adapter.setOnItemClickListener(object : MyAdapter.onItemClickListener{
+                        override fun onItemClick(position: Int) {
 
-                    songRecyclerView.adapter = MyAdapter(songArrayList)
+
+                            val intent = Intent(this@SongList, Song::class.java)
+                            intent.putExtra("songTitle",songArrayList[position].songTitle)
+                            intent.putExtra("singer",songArrayList[position].singer)
+                            intent.putExtra("key",songArrayList[position].key)
+                            intent.putExtra("lyrics",songArrayList[position].lyrics)
+                            startActivity(intent)
+
+                        }
+
+                    })
 
                 }
 
@@ -67,6 +82,10 @@ class SongList : AppCompatActivity() {
     }
 
 }
+
+
+
+
 
 
 
