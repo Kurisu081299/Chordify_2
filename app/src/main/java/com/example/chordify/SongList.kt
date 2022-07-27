@@ -13,12 +13,14 @@ import kotlin.reflect.KClass
 class SongList : AppCompatActivity() {
 
     private lateinit var dbref : DatabaseReference
+    private lateinit var songSearch : EditText
     private lateinit var songRecyclerView: RecyclerView
     private lateinit var songArrayList : ArrayList<SongsInfo>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_song_list)
+
 
         songRecyclerView = findViewById(R.id.listviewsongs)
         songRecyclerView.layoutManager = LinearLayoutManager(this)
