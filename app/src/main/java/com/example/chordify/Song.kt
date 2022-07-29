@@ -49,10 +49,10 @@ class Song : AppCompatActivity() {
             startActivity(Intent(this@Song, LineUp::class.java))
         }
 
-       /* val viewlineup = findViewById<View>(R.id.viewlineup) as Button
-        viewlineup.setOnClickListener {
-            startActivity(Intent(this@Song, LineUp::class.java))
-        }*/
+       val addtolineup = findViewById<View>(R.id.add) as Button
+        addtolineup.setOnClickListener {
+            startActivity(Intent(this@Song, AddLineup::class.java))
+        }
     }
 
 }
