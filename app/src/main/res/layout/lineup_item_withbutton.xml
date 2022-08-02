@@ -24,8 +24,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:orientation="horizontal">
+
             <TextView
-                android:id="@+id/tvlineupname"
+                android:id="@+id/tvlineupname2"
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
@@ -36,29 +37,7 @@
                 android:textStyle="bold"/>
 
             <TextView
-                android:id="@+id/tvlineuptitle"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="0dp"
-                android:layout_marginStart="0dp"
-                android:text=""
-                android:textColor="@color/black_overlay"
-                android:textSize="0sp"
-                android:textStyle="bold"/>
-
-            <TextView
-                android:id="@+id/tvdescription"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="0dp"
-                android:layout_marginStart="0dp"
-                android:text=""
-                android:textColor="@color/black_overlay"
-                android:textSize="0sp"
-                android:textStyle="bold"/>
-
-            <TextView
-                android:id="@+id/tvdesc"
+                android:id="@+id/tvdesc2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
@@ -69,7 +48,7 @@
                 android:textStyle="bold"/>
 
             <TextView
-                android:id="@+id/tvlineupname2"
+                android:id="@+id/tvlineupname"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_marginTop="0dp"
@@ -80,7 +59,7 @@
                 android:textStyle="bold"/>
 
             <TextView
-                android:id="@+id/tvdesc2"
+                android:id="@+id/tvdesc"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_marginTop="0dp"
@@ -89,6 +68,7 @@
                 android:textColor="@color/black_overlay"
                 android:textSize="20sp"
                 android:textStyle="bold"/>
+
         </LinearLayout>
 
     </LinearLayout>
