@@ -65,6 +65,7 @@ class MyAdapter2(private val lineupInfos : ArrayList<LineupInfo>) : RecyclerView
 
 
 
+
     }
 
 
