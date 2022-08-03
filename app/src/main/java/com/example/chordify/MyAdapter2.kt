@@ -8,10 +8,27 @@ import androidx.recyclerview.widget.RecyclerView
 
 class MyAdapter2(private val lineupInfos : ArrayList<LineupInfo>) : RecyclerView.Adapter<MyAdapter2.MyViewHolder1>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyAdapter2.MyViewHolder1 {
+    private lateinit var linelistener : onItemClickListener
+
+
+    interface onItemClickListener {
+
+        fun onItemClick(position: Int)
+
+    }
+
+
+    fun setOnItemClickListener(listener: onItemClickListener){
+
+        linelistener = listener
+
+
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder1 {
 
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.lineup_item, parent, false)
-        return MyAdapter2.MyViewHolder1(itemView)
+        return MyViewHolder1(itemView, linelistener)
 
     }
 
@@ -20,6 +37,10 @@ class MyAdapter2(private val lineupInfos : ArrayList<LineupInfo>) : RecyclerView
 
         holder.name.text = currentitem.name
         holder.desc.text = currentitem.desc
+        holder.name1.text = currentitem.name
+        holder.desc1.text = currentitem.desc
+        holder.name2.text = currentitem.name
+        holder.desc2.text = currentitem.desc
 
     }
 
@@ -27,10 +48,21 @@ class MyAdapter2(private val lineupInfos : ArrayList<LineupInfo>) : RecyclerView
         return lineupInfos.size
     }
 
-    class MyViewHolder1(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class MyViewHolder1(itemView: View, listener: onItemClickListener) : RecyclerView.ViewHolder(itemView) {
 
         val name : TextView = itemView.findViewById(R.id.tvlineupname)
         val desc : TextView = itemView.findViewById(R.id.tvdesc)
+        val name1 :TextView = itemView.findViewById(R.id.tvlineuptitle)
+        val desc1 : TextView = itemView.findViewById(R.id.tvdescription)
+        val name2 : TextView = itemView.findViewById(R.id.tvlineupname2)
+        val desc2 : TextView = itemView.findViewById(R.id.tvdesc2)
+
+        init{
+            itemView.setOnClickListener {
+                listener.onItemClick(adapterPosition)
+            }
+        }
+
 
 
 

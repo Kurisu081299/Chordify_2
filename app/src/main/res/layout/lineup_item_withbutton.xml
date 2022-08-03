@@ -24,8 +24,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:orientation="horizontal">
+
             <TextView
-                android:id="@+id/tvlineupname1"
+                android:id="@+id/tvlineupname2"
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
@@ -36,7 +37,7 @@
                 android:textStyle="bold"/>
 
             <TextView
-                android:id="@+id/tvdesc1"
+                android:id="@+id/tvdesc2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
@@ -46,18 +47,28 @@
                 android:textSize="20sp"
                 android:textStyle="bold"/>
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/addtolineup"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:background="@drawable/roundbutton"
-                android:fontFamily="@font/kadwa"
-                android:text="Add"
-                android:textColor="#FFFFFF"
-                app:layout_constraintBottom_toTopOf="@+id/textView2"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+            <TextView
+                android:id="@+id/tvlineupname"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginStart="0dp"
+                android:text="Here I Am Again"
+                android:textColor="@color/black_overlay"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvdesc"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginStart="0dp"
+                android:text="E"
+                android:textColor="@color/black_overlay"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
         </LinearLayout>
 
     </LinearLayout>

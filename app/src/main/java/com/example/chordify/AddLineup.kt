@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.EditText
 import android.widget.ImageButton
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
@@ -14,23 +15,23 @@ class AddLineup : AppCompatActivity() {
 
     private lateinit var dbref2 : DatabaseReference
     private lateinit var songSearch : EditText
-    private lateinit var lineRecyclerView: RecyclerView
-    private lateinit var lineArrayList : ArrayList<LineupInfo>
+    private lateinit var lineupRecyclerView: RecyclerView
+    private lateinit var lineupArrayList : ArrayList<LineupInfo>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_lineup)
 
-        lineRecyclerView = findViewById(R.id.recyclerviewaddlineup)
-        lineRecyclerView.layoutManager = LinearLayoutManager(this)
-        lineRecyclerView.setHasFixedSize(true)
+        lineupRecyclerView = findViewById(R.id.recyclerviewaddlineup)
+        lineupRecyclerView.layoutManager = LinearLayoutManager(this)
+        lineupRecyclerView.setHasFixedSize(true)
 
-        lineArrayList = arrayListOf<LineupInfo>()
+        lineupArrayList = arrayListOf<LineupInfo>()
         getlineData()
 
 
-        val back1 = findViewById<View>(R.id.backbutton3) as ImageButton
-        back1.setOnClickListener {
+        val back5 = findViewById<View>(R.id.backbutton5) as ImageButton
+        back5.setOnClickListener {
             startActivity(Intent(this@AddLineup, SongList::class.java))
         }
     }
@@ -47,10 +48,19 @@ class AddLineup : AppCompatActivity() {
                     for (lineSnapshot in snapshot.children){
 
                         val line = lineSnapshot.getValue(LineupInfo::class.java)
-                        lineArrayList.add(line!!)
+                        lineupArrayList.add(line!!)
                     }
 
-                    lineRecyclerView.adapter = MyAdapter2(lineArrayList)
+                    var adapter2 = MyAdapter2(lineupArrayList)
+                    lineupRecyclerView.adapter = adapter2
+                    adapter2.setOnItemClickListener(object : MyAdapter2.onItemClickListener{
+                        override fun onItemClick(position: Int) {
+                            Toast.makeText(applicationContext,"Added",Toast.LENGTH_SHORT).show()
+                            finish()
+
+                        }
+
+                    })
 
                 }
 

@@ -52,8 +52,18 @@ class LineUp : AppCompatActivity() {
                         lineArrayList.add(line!!)
                     }
 
-                    lineRecyclerView.adapter = MyAdapter2(lineArrayList)
+                    var lineadapter = MyAdapter2(lineArrayList)
+                    lineRecyclerView.adapter = lineadapter
+                    lineadapter.setOnItemClickListener(object : MyAdapter2.onItemClickListener{
+                        override fun onItemClick(position: Int) {
+                            val intent = Intent(this@LineUp, ViewLineup::class.java)
+                            intent.putExtra("name1",lineArrayList[position].name)
+                            intent.putExtra("desc1",lineArrayList[position].desc)
+                            startActivity(intent)
 
+                        }
+
+                 })
                 }
 
             }
