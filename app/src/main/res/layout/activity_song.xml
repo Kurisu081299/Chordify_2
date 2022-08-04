@@ -19,17 +19,19 @@
         tools:ignore="MissingConstraints"
         android:orientation="horizontal"
         >
+
         <TextView
             android:id="@+id/tvsongtitle"
             android:layout_width="230dp"
             android:layout_height="30dp"
-            android:layout_marginTop="20dp"
             android:layout_marginStart="65dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="30dp"
+            android:autoSizeTextType="uniform"
             android:text="Look What You Made Me Do"
             android:textColor="#000000"
-            android:autoSizeTextType="uniform"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:fontFamily="@font/kadwa"/>
 
         <TextView
             android:id="@+id/tvsinger"
@@ -42,7 +44,7 @@
             android:textSize="18sp"
             android:autoSizeTextType="uniform"
             android:textColor="@color/black_overlay"
-
+            android:fontFamily="@font/kadwa"
             />
 
 

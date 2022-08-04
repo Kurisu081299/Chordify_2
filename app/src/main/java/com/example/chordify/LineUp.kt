@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -33,6 +34,10 @@ class LineUp : AppCompatActivity() {
         val back1 = findViewById<View>(R.id.backbutton2) as ImageButton
         back1.setOnClickListener {
             startActivity(Intent(this@LineUp, MainActivity::class.java))
+        }
+        val create = findViewById<View>(R.id.addLineupbtn) as Button
+        create.setOnClickListener {
+            startActivity(Intent(this@LineUp, CreateLineup::class.java))
         }
     }
 
