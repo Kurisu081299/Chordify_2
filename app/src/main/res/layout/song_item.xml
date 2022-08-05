@@ -31,20 +31,21 @@
                 android:layout_marginTop="0dp"
                 android:layout_marginStart="8dp"
                 android:text="Here I Am Again"
-
+                android:fontFamily="@font/kadwa"
                 android:textColor="@color/black_overlay"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 android:textStyle="bold"/>
             <TextView
                 android:id="@+id/tvsinger"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
-                android:layout_marginStart="0dp"
+                android:layout_marginStart="20dp"
                 android:text="Matt"
                 android:textColor="@color/black_overlay"
-                android:textSize="20sp"
-                android:textStyle="bold"/>
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/kadwa"/>
 
             <TextView
                 android:id="@+id/tvkey"
@@ -54,8 +55,9 @@
                 android:layout_marginStart="0dp"
                 android:text="E"
                 android:textColor="@color/black_overlay"
-                android:textSize="20sp"
-                android:textStyle="bold"/>
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/kadwa"/>
             <TextView
                 android:id="@+id/tvcontentlyrics"
                 android:layout_width="wrap_content"
@@ -65,7 +67,8 @@
                 android:text="E"
                 android:textColor="@color/black_overlay"
                 android:textSize="0sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:fontFamily="@font/kadwa"/>
 
         </LinearLayout>
 

@@ -34,7 +34,8 @@
                 android:text="Here I Am Again"
                 android:textColor="@color/black_overlay"
                 android:textSize="20sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:fontFamily="@font/kadwa"/>
 
             <TextView
                 android:id="@+id/tvdesc2"
@@ -45,7 +46,8 @@
                 android:text="E"
                 android:textColor="@color/black_overlay"
                 android:textSize="20sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:fontFamily="@font/kadwa"/>
 
             <TextView
                 android:id="@+id/tvlineupname"
@@ -56,7 +58,8 @@
                 android:text="Here I Am Again"
                 android:textColor="@color/black_overlay"
                 android:textSize="20sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:fontFamily="@font/kadwa"/>
 
             <TextView
                 android:id="@+id/tvdesc"
@@ -67,7 +70,8 @@
                 android:text="E"
                 android:textColor="@color/black_overlay"
                 android:textSize="20sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:fontFamily="@font/kadwa"/>
 
         </LinearLayout>
 
