@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.EditText
 import android.widget.ImageButton
+import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -17,6 +18,7 @@ class AddLineup : AppCompatActivity() {
     private lateinit var songSearch : EditText
     private lateinit var lineupRecyclerView: RecyclerView
     private lateinit var lineupArrayList : ArrayList<LineupInfo>
+    private lateinit var songArrayList : ArrayList<SongsInfo>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,6 +57,7 @@ class AddLineup : AppCompatActivity() {
                     lineupRecyclerView.adapter = adapter2
                     adapter2.setOnItemClickListener(object : MyAdapter2.onItemClickListener{
                         override fun onItemClick(position: Int) {
+
                             Toast.makeText(applicationContext,"Added",Toast.LENGTH_SHORT).show()
                             finish()
 
@@ -71,6 +74,10 @@ class AddLineup : AppCompatActivity() {
             }
 
         })
+
+    }
+
+    private fun addtolineup() {
 
     }
 }

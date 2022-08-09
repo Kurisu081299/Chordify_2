@@ -37,6 +37,7 @@
             android:gravity="center">
 
             <EditText xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/lineupName"
                 android:layout_width="300dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
@@ -51,6 +52,7 @@
                 android:textColorHint="@color/black_overlay" />
 
             <EditText xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/descriptiontext"
                 android:layout_width="300dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
@@ -91,7 +93,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/createbtn"
+        android:id="@+id/newbtn"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_marginTop="110dp"
@@ -118,6 +120,6 @@
         android:elevation="8dp"
         app:layout_constraintBottom_toBottomOf="@+id/relativeLayout"
         app:layout_constraintEnd_toEndOf="@+id/relativeLayout"
-        app:layout_constraintStart_toEndOf="@+id/createbtn"
+        app:layout_constraintStart_toEndOf="@+id/newbtn"
         app:layout_constraintTop_toTopOf="@+id/relativeLayout" />
 </androidx.constraintlayout.widget.ConstraintLayout>
