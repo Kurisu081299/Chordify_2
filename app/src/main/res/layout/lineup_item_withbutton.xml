@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="#ACDA88"
+    app:cardElevation="8dp"
+    app:cardCornerRadius="50dp"
+    android:layout_margin="3dp"
+
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginVertical="6dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvlineupname2"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_marginStart="8dp"
+                android:text="Here I Am Again"
+                android:textColor="@color/black_overlay"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/kadwa"/>
+
+            <TextView
+                android:id="@+id/tvdesc2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_marginStart="0dp"
+                android:text="E"
+                android:textColor="@color/black_overlay"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/kadwa"/>
+
+            <TextView
+                android:id="@+id/tvlineupname"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginStart="0dp"
+                android:text="Here I Am Again"
+                android:textColor="@color/black_overlay"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/kadwa"/>
+
+            <TextView
+                android:id="@+id/tvdesc"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginStart="0dp"
+                android:text="E"
+                android:textColor="@color/black_overlay"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/kadwa"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

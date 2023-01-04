@@ -4,16 +4,168 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Song">
+    android:background="#74B05E"
+    android:foregroundTint="#74B05E"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="60dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/backbuttonround"
+        tools:ignore="MissingConstraints"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/tvsongtitle"
+            android:layout_width="230dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:autoSizeTextType="uniform"
+            android:text="Look What You Made Me Do"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:fontFamily="@font/kadwa"/>
+
+        <TextView
+            android:id="@+id/tvsinger"
+            android:layout_width="230dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginStart="65dp"
+            android:layout_marginEnd="30dp"
+            android:text="Matt"
+            android:textSize="18sp"
+            android:autoSizeTextType="uniform"
+            android:textColor="@color/black_overlay"
+            android:fontFamily="@font/kadwa"
+            />
+
+
+        <LinearLayout
+            android:id="@+id/layoutcontainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            xmlns:app = "http://schemas.android.com/apk/res-auto"
+            android:elevation="8dp"
+            android:layout_marginBottom="70dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/bgsong_contentlayout"
+            android:scrollbars = "vertical"
+            android:orientation="horizontal">
+
+            <ScrollView
+                android:id="@+id/scroll"
+                android:layout_width="300dp"
+                android:layout_height="600dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:scrollbars="vertical"
+                android:fillViewport="true">
+            <TextView
+                android:id="@+id/tvcontentlyrics"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="Here I Am Again"
+                android:textColor="@color/black_overlay"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+            </ScrollView>
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:fontFamily="@font/joti_one"
+        android:paddingBottom="15dp"
+        android:text="@string/chordify"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <ImageButton
+        android:id="@+id/backbutton3"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/backbtnsong"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_launcher_foreground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <TextView
+        android:id="@+id/tvkey"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginStart="300dp"
+        android:layout_marginEnd="30dp"
+        android:text="E"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@+id/backbutton3"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/backbtnsong"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/add"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="@drawable/roundbutton"
+        android:fontFamily="@font/kadwa"
+        android:text="Add to Lineup"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="650dp"
+        android:layout_marginEnd="170dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/viewlineup"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="@drawable/roundbutton"
+        android:fontFamily="@font/kadwa"
+        android:text="View Lineup"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="650dp"
+        android:layout_marginStart="170dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#74B05E"
+    android:foregroundTint="#74B05E"
+    tools:context=".CreateLineup">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#74B05E"
+        android:foregroundTint="#74B05E">
+
+        <TextView
+            android:id="@+id/tvsongtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="250dp"
+            android:fontFamily="@font/kadwa"
+            android:gravity="center"
+            android:text="Create Lineup"
+            android:textColor="#FFFFFF"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <EditText xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/lineupName"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="0dp"
+                android:layout_marginBottom="70dp"
+                android:background="@drawable/roundbuttons"
+                android:elevation="8dp"
+                android:fontFamily="@font/kadwa"
+                android:hint="Lineup Name"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textColorHint="@color/black_overlay" />
+
+            <EditText xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/descriptiontext"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="-300dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="25dp"
+                android:background="@drawable/roundbuttons"
+                android:elevation="8dp"
+                android:fontFamily="@font/kadwa"
+                android:hint="Description"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textColorHint="@color/black_overlay" />
+
+
+        </LinearLayout>
+
+
+        <ImageButton
+            android:id="@+id/backbuttoncreate"
+            android:layout_width="49dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/roundbuttons"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_launcher_foreground"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.044"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.023" />
+
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/newbtn"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="110dp"
+        android:elevation="8dp"
+        android:background="@drawable/roundbutton"
+        android:fontFamily="@font/kadwa"
+        android:text="Create"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/relativeLayout"
+        app:layout_constraintEnd_toStartOf="@+id/cancelbtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/relativeLayout" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cancelbtn"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="@drawable/roundbutton"
+        android:fontFamily="@font/kadwa"
+        android:text="Cancel"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="110dp"
+        android:elevation="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/relativeLayout"
+        app:layout_constraintEnd_toEndOf="@+id/relativeLayout"
+        app:layout_constraintStart_toEndOf="@+id/newbtn"
+        app:layout_constraintTop_toTopOf="@+id/relativeLayout" />
+</androidx.constraintlayout.widget.ConstraintLayout>

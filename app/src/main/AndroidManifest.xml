@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Chordify">
         <activity
+            android:name=".CreateLineup"
+            android:exported="false" />
+        <activity
+            android:name=".ViewLineup"
+            android:exported="false" />
+        <activity
+            android:name=".AddLineup"
+            android:exported="false" />
+        <activity
             android:name=".Song"
             android:exported="false" />
         <activity

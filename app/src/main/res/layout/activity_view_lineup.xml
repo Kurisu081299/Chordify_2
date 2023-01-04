@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#74B05E"
+    android:foregroundTint="#74B05E"
+    tools:context=".ViewLineup">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="60dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/backbuttonround"
+        tools:ignore="MissingConstraints"
+        android:orientation="horizontal"
+        >
+    <TextView
+        android:id="@+id/tvlineuptitle"
+        android:layout_width="230dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginEnd="30dp"
+        android:text="Look What You Made Me Do"
+        android:textColor="#000000"
+        android:autoSizeTextType="uniform"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tvdescription"
+        android:layout_width="230dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginEnd="30dp"
+        android:text="Matt"
+        android:textSize="18sp"
+        android:autoSizeTextType="uniform"
+        android:textColor="@color/black_overlay"/>
+
+        <LinearLayout
+            android:id="@+id/layoutcontainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            xmlns:app = "http://schemas.android.com/apk/res-auto"
+            android:elevation="8dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/bgsong_contentlayout"
+            android:scrollbars = "vertical"
+            android:orientation="horizontal">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/scroll"
+                android:layout_width="300dp"
+                android:layout_height="600dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:scrollbars="vertical"
+                android:fillViewport="true">
+
+
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+
+        />
+    </RelativeLayout>
+    <ImageButton
+        android:id="@+id/backbutton4"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/backbtnsong"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_launcher_foreground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

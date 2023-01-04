@@ -23,8 +23,8 @@
         <!--List View from which data is to be searched
          for different programming languages-->
 
-        <SearchView
-            android:id="@+id/searchlineup"
+        <TextView
+            android:id="@+id/nouse"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -32,34 +32,37 @@
             android:layout_marginTop="15dp"
             android:layout_marginEnd="15dp"
             android:layout_marginBottom="8dp"
-            android:background="@drawable/roundbuttons"
+             android:gravity="center"
             android:iconifiedByDefault="false"
             android:padding="4dp"
-            android:queryHint="Search Lineup" />
+            android:text="Select Lineup"
+            android:textSize="30dp"
+            android:fontFamily="@font/kadwa"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="fill_parent"
-            android:layout_below="@id/searchlineup"
+            android:layout_below="@id/nouse"
             android:layout_marginStart="13dp"
             android:layout_marginEnd="13dp"
             android:layout_marginBottom="60dp"
-            android:background="@drawable/backbuttonround"></LinearLayout>
+            android:background="@drawable/backbuttonround">
+        </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerviewlineup"
+            android:id="@+id/recyclerviewaddlineup"
             android:layout_width="match_parent"
             android:layout_height="fill_parent"
-            android:layout_below="@id/searchlineup"
+            android:layout_below="@id/nouse"
             android:layout_marginTop="45dp"
             android:layout_marginStart="13dp"
             android:layout_marginEnd="13dp"
             android:layout_marginBottom="140dp"
-            tools:listitem="@layout/lineup_item"/>
+            tools:listitem="@layout/lineup_item_withbutton"/>
 
 
         <ImageButton
-            android:id="@+id/backbutton2"
+            android:id="@+id/backbutton5"
             android:layout_width="49dp"
             android:layout_height="49dp"
             android:layout_marginStart="15dp"
@@ -90,18 +93,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/addLineupbtn"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/roundbutton"
-        android:fontFamily="@font/kadwa"
-        android:text="Create Lineup"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
